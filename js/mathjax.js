@@ -58,6 +58,6 @@ MathJax = {
     script = d.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
-    script.src = 'https://github.elemecdn.com/mathjax@2.7.7/MathJax.js';
+    script.src = 'https://gcore.jsdelivr.net/npm/mathjax@2.7.7/MathJax.js';
     d.getElementsByTagName('head')[0].appendChild(script);
 })(document);

@@ -1053,6 +1053,12 @@ body {
     .markdown ol ol, .markdown ol ul, .markdown ul ol, .markdown ul ul {
       margin: 0;
       margin-left: 1rem; }
+  .markdown a.md_link .icon {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin-left: 4px;
+    filter: invert(60%); }
   .markdown blockquote {
     border-left: 4px solid #999;
     color: #808080;
@@ -1094,14 +1100,14 @@ body {
       .markdown pre code, .markdown pre code span {
         font-style: normal !important; }
       .markdown pre code span[id] {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
         border-right: 1px solid #e3e5e8;
         padding-left: 3px !important;
         padding-right: 1rem !important;
         margin-right: .5rem !important; }
         .markdown pre code span[id] a {
-          -moz-user-select: none;
-          -webkit-user-select: none;
-          user-select: none;
           pointer-events: none; }
   .markdown .highlight {
     border-radius: 2px;
