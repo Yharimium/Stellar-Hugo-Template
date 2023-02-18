@@ -1,0 +1,374 @@
+body, input, code {
+  font-family: "Roboto Mono", "LXGW WenKai Screen"; }
+
+.site-title, h1, h2, h3, h4, h5, h6, dt {
+  font-family: "Fira Code", "LXGW WenKai Screen"; }
+
+.stellar.note {
+  border: 1px solid var(--theme-border);
+  border-radius: 4px;
+  margin: 1rem 0;
+  padding: .5rem 1rem;
+  background: var(--theme-bg2);
+  color: var(--text-p1); }
+  .stellar.note > :first-child {
+    margin-top: 0 !important; }
+    .stellar.note > :first-child > :first-child {
+      margin-top: 0 !important; }
+      .stellar.note > :first-child > :first-child > :first-child {
+        margin-top: 0 !important; }
+        .stellar.note > :first-child > :first-child > :first-child > :first-child {
+          margin-top: 0 !important; }
+  .stellar.note > :last-child {
+    margin-bottom: 0 !important; }
+    .stellar.note > :last-child > :last-child {
+      margin-bottom: 0 !important; }
+      .stellar.note > :last-child > :last-child > :last-child {
+        margin-bottom: 0 !important; }
+        .stellar.note > :last-child > :last-child > :last-child > :last-child {
+          margin-bottom: 0 !important; }
+  .stellar.note > .title {
+    font-size: 15px;
+    margin-bottom: .5rem; }
+  .stellar.note > .inner {
+    font-size: 95%; }
+    .stellar.note > .inner code {
+      color: var(--text-code);
+      background: var(--theme-bg1); }
+
+.stellar.mark {
+  padding: 0 1px;
+  border-radius: 2px;
+  background: var(--theme-bg2);
+  border: 1px solid var(--theme-border);
+  color: var(--text-p0); }
+
+.stellar.tag {
+  -moz-transition: background 0.2s, color 0.2s;
+  -webkit-transition: background 0.2s, color 0.2s;
+  -o-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+  padding: 0 4px;
+  border-radius: 2px;
+  background: var(--theme-bg1);
+  color: var(--text-p2);
+  margin: 2px 0;
+  display: inline-block;
+  font-size: .875rem; }
+  .stellar.tag:hover {
+    background: var(--text-p2);
+    color: var(--theme-bg1); }
+
+.stellar.copy-area {
+  display: flex;
+  margin: 1rem 0; }
+  .stellar.copy-area pre {
+    border: 1px solid #e3e5e8;
+    border-radius: 4px !important;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 3px .5rem;
+    margin: 0;
+    background: #f1f2f3;
+    position: relative; }
+    .stellar.copy-area pre code {
+      display: block;
+      overflow: auto;
+      margin: 0 2rem 0 .2rem; }
+      .stellar.copy-area pre code::-webkit-scrollbar {
+        height: 0;
+        width: 0; }
+    .stellar.copy-area pre .clipboard {
+      border-left: 1px solid #e3e5e8;
+      -moz-transition: background, 0.1s;
+      -webkit-transition: background, 0.1s;
+      -o-transition: background, 0.1s;
+      transition: background, 0.1s;
+      display: flex;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      padding: 0 .3rem;
+      background: #e9eaec;
+      align-items: center; }
+      .stellar.copy-area pre .clipboard img {
+        width: 1.2rem;
+        height: 1.2rem;
+        opacity: 1 !important; }
+      .stellar.copy-area pre .clipboard:hover, .stellar.copy-area pre .clipboard.active {
+        background: #ffffff; }
+
+.stellar.radio-box input[type=radio] {
+  border-radius: 50%;
+  border: 2px solid #2385d5;
+  pointer-events: none;
+  width: 1rem;
+  height: 1rem;
+  margin-right: .5rem;
+  appearance: none;
+  position: relative;
+  vertical-align: -3px; }
+  .stellar.radio-box input[type=radio][checked=true]::before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    scale: 70%;
+    background: #2385d5; }
+
+.stellar.check-box input[type=radio] {
+  border-radius: 2px;
+  border: 2px solid var(--theme);
+  pointer-events: none;
+  width: 1rem;
+  height: 1rem;
+  margin-right: .5rem;
+  appearance: none;
+  position: relative;
+  vertical-align: -3px; }
+  .stellar.check-box input[type=radio][checked=true]::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--theme);
+    background-image: url("/img/checkbox/check.svg");
+    background-size: cover; }
+  .stellar.check-box input[type=radio][checked=true][symbol=check]::before {
+    background-image: url("/img/checkbox/check.svg"); }
+  .stellar.check-box input[type=radio][checked=true][symbol=plus]::before {
+    background-image: url("/img/checkbox/plus.svg"); }
+  .stellar.check-box input[type=radio][checked=true][symbol=minus]::before {
+    background-image: url("/img/checkbox/minus.svg"); }
+  .stellar.check-box input[type=radio][checked=true][symbol=times]::before {
+    background-image: url("/img/checkbox/times.svg"); }
+
+.stellar.folding {
+  border: 1px solid var(--theme-border);
+  border-radius: 4px;
+  background: var(--theme-bg2);
+  margin: 1rem 0; }
+  .stellar.folding > summary {
+    font-size: 13.6px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    color: var(--text-p1);
+    padding: .5rem; }
+    .stellar.folding > summary > img {
+      width: 20px;
+      height: 20px;
+      margin-right: .25rem; }
+      .stellar.folding > summary > img.arrow {
+        -moz-transition: transform 0.15s ease;
+        -webkit-transition: transform 0.15s ease;
+        -o-transition: transform 0.15s ease;
+        transition: transform 0.15s ease; }
+  .stellar.folding > .body {
+    font-size: 95%;
+    padding: 1rem;
+    padding-top: .5rem; }
+    .stellar.folding > .body > :first-child {
+      margin-top: 0 !important; }
+      .stellar.folding > .body > :first-child > :first-child {
+        margin-top: 0 !important; }
+        .stellar.folding > .body > :first-child > :first-child > :first-child {
+          margin-top: 0 !important; }
+          .stellar.folding > .body > :first-child > :first-child > :first-child > :first-child {
+            margin-top: 0 !important; }
+    .stellar.folding > .body > :last-child {
+      margin-bottom: 0 !important; }
+      .stellar.folding > .body > :last-child > :last-child {
+        margin-bottom: 0 !important; }
+        .stellar.folding > .body > :last-child > :last-child > :last-child {
+          margin-bottom: 0 !important; }
+          .stellar.folding > .body > :last-child > :last-child > :last-child > :last-child {
+            margin-bottom: 0 !important; }
+    .stellar.folding > .body code {
+      color: var(--text-code);
+      background: var(--theme-bg1); }
+    .stellar.folding > .body > .highlight {
+      border: 1px solid var(--theme-border); }
+  .stellar.folding[open] > summary > img.arrow {
+    transform: rotate(90deg); }
+
+.stellar.poetry {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .stellar.poetry > .inner {
+    padding-left: 1rem;
+    position: relative; }
+    .stellar.poetry > .inner::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      left: -4px;
+      top: 4px;
+      bottom: 4px;
+      border-radius: 4px;
+      background: #f1f2f3; }
+    .stellar.poetry > .inner > .title {
+      padding-top: .75rem;
+      position: relative; }
+      .stellar.poetry > .inner > .title::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        left: calc(-1rem - 4px);
+        top: calc(4px + .75rem);
+        bottom: 4px;
+        border-radius: 4px;
+        background: #ff5724; }
+    .stellar.poetry > .inner > .meta {
+      font-size: 13px;
+      color: #4d4d4d;
+      margin-top: 4px; }
+    .stellar.poetry > .inner > .body {
+      border-top: 1px dashed #e3e5e8;
+      border-bottom: 1px dashed #e3e5e8;
+      margin: .75rem 0;
+      padding: .5rem 0; }
+      .stellar.poetry > .inner > .body > :first-child {
+        margin-top: 0 !important; }
+        .stellar.poetry > .inner > .body > :first-child > :first-child {
+          margin-top: 0 !important; }
+          .stellar.poetry > .inner > .body > :first-child > :first-child > :first-child {
+            margin-top: 0 !important; }
+            .stellar.poetry > .inner > .body > :first-child > :first-child > :first-child > :first-child {
+              margin-top: 0 !important; }
+      .stellar.poetry > .inner > .body > :last-child {
+        margin-bottom: 0 !important; }
+        .stellar.poetry > .inner > .body > :last-child > :last-child {
+          margin-bottom: 0 !important; }
+          .stellar.poetry > .inner > .body > :last-child > :last-child > :last-child {
+            margin-bottom: 0 !important; }
+            .stellar.poetry > .inner > .body > :last-child > :last-child > :last-child > :last-child {
+              margin-bottom: 0 !important; }
+      .stellar.poetry > .inner > .body p {
+        font-size: 14px;
+        margin: 5px 0; }
+    .stellar.poetry > .inner > .footer {
+      font-size: 13px;
+      font-style: italic;
+      color: #808080;
+      padding-bottom: .75rem; }
+
+.stellar {
+  --theme: #333;
+  --theme-bg1: #e3e3e3;
+  --theme-bg2: #f1f2f3;
+  --theme-border: #dfe1e4;
+  --text-p0: #000;
+  --text-p1: #333;
+  --text-p2: #4d4d4d; }
+
+.stellar.check-box[color=""] {
+  --theme: #2196f3; }
+
+.stellar[color=red] {
+  --theme: #f44336;
+  --theme-bg1: #fcd2cf;
+  --theme-bg2: #fce9e8;
+  --theme-border: #e6b6b3;
+  --text-p0: #3f1512;
+  --text-p1: #4f1b17;
+  --text-p2: #740e06; }
+
+.stellar[color=orange] {
+  --theme: #fa6400;
+  --theme-bg1: #fce1cf;
+  --theme-bg2: #fcf0e8;
+  --theme-border: #e6c7b3;
+  --text-p0: #3f2412;
+  --text-p1: #4f2d17;
+  --text-p2: #743206; }
+
+.stellar[color=yellow] {
+  --theme: #ffbd2b;
+  --theme-bg1: #fceecf;
+  --theme-bg2: #fcf6e8;
+  --theme-border: #e6d6b3;
+  --text-p0: #3f3112;
+  --text-p1: #4f3e17;
+  --text-p2: #745206; }
+
+.stellar[color=green] {
+  --theme: #3dc550;
+  --theme-bg1: #cffcd5;
+  --theme-bg2: #e8fceb;
+  --theme-border: #b3e6ba;
+  --text-p0: #123f19;
+  --text-p1: #174f1f;
+  --text-p2: #067416; }
+
+.stellar[color=cyan] {
+  --theme: #1bcdfc;
+  --theme-bg1: #cff3fc;
+  --theme-bg2: #e8f8fc;
+  --theme-border: #b3dbe6;
+  --text-p0: #12363f;
+  --text-p1: #17434f;
+  --text-p2: #065d74; }
+
+.stellar[color=blue] {
+  --theme: #2196f3;
+  --theme-bg1: #cfe8fc;
+  --theme-bg2: #e8f3fc;
+  --theme-border: #b3cfe6;
+  --text-p0: #122b3f;
+  --text-p1: #17364f;
+  --text-p2: #064374; }
+
+.stellar[color=purple] {
+  --theme: #9c27b0;
+  --theme-bg1: #f6cffc;
+  --theme-bg2: #f9e8fc;
+  --theme-border: #deb3e6;
+  --text-p0: #39123f;
+  --text-p1: #47174f;
+  --text-p2: #640674; }
+
+.stellar[color=light] {
+  --theme-bg1: #e0e0e0;
+  --theme-bg2: #fff;
+  --text-p0: #000;
+  --text-p1: #111;
+  --text-p2: #1f1f1f;
+  --text-p3: #555;
+  --text-code: #000; }
+
+.stellar[color=dark] {
+  --theme-bg1: #1f1f1f;
+  --theme-bg2: #333;
+  --theme-border: #000;
+  --text-p0: #fff;
+  --text-p1: #fff;
+  --text-p2: #e0e0e0;
+  --text-p3: #ddd;
+  --text-code: #fff; }
+
+.stellar[color=warning] {
+  --theme: #ffbd2b;
+  --theme-border: #ffe659;
+  --theme-bg1: #fff4b7;
+  --theme-bg2: #ffed8a;
+  --theme-link: #ff453a; }
+
+.stellar[color=error] {
+  --theme: #ffbd2b;
+  --theme-border: #ff453a;
+  --theme-bg1: #ff6159;
+  --theme-bg2: #ff453a;
+  --theme-link: #ffe659;
+  --text-p0: #fff;
+  --text-p1: #fff;
+  --text-p2: #e0e0e0;
+  --text-p3: #ddd;
+  --text-code: #fff; }
