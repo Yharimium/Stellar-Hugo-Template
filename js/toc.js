@@ -1,4 +1,17 @@
-$anchor = $("#TableOfContents a");
+$toc = $("#TableOfContents");
+
+$toc.find("li").each( (id, el) => {
+    var $el = $(el);
+    var $a = $el.find("> a");
+    var text = $el.text();
+    if ($a.length > 1) {
+        $el.html("");
+        $el.append($a.eq(0).text(text));
+    }
+});
+
+
+$anchor = $toc.find("a");
 $widgets = $(".widgets");
 $heading = $(".content").children("h2, h3, h4");
 
