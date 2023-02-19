@@ -3,10 +3,12 @@ $toc = $("#TableOfContents");
 $toc.find("li").each( (id, el) => {
     var $el = $(el);
     var $a = $el.find("> a");
-    var text = $el.text();
+    var $ul = $el.find("> ul");
     if ($a.length > 1) {
-        $el.html("");
-        $el.append($a.eq(0).text(text));
+        $ul.remove();
+        var text = $el.text();
+        $el.html($ul);
+        $el.prepend($a.eq(0).text(text));
     }
 });
 
