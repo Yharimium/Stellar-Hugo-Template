@@ -12,21 +12,21 @@ body, input, code {
   background: var(--theme-bg2);
   color: var(--text-p1); }
   .stellar.note > :first-child {
-    margin-top: 0 !important; }
+    margin-top: 0; }
     .stellar.note > :first-child > :first-child {
-      margin-top: 0 !important; }
+      margin-top: 0; }
       .stellar.note > :first-child > :first-child > :first-child {
-        margin-top: 0 !important; }
+        margin-top: 0; }
         .stellar.note > :first-child > :first-child > :first-child > :first-child {
-          margin-top: 0 !important; }
+          margin-top: 0; }
   .stellar.note > :last-child {
-    margin-bottom: 0 !important; }
+    margin-bottom: 0; }
     .stellar.note > :last-child > :last-child {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0; }
       .stellar.note > :last-child > :last-child > :last-child {
-        margin-bottom: 0 !important; }
+        margin-bottom: 0; }
         .stellar.note > :last-child > :last-child > :last-child > :last-child {
-          margin-bottom: 0 !important; }
+          margin-bottom: 0; }
   .stellar.note > .title {
     font-size: 15px;
     margin-bottom: .5rem; }
@@ -175,21 +175,21 @@ body, input, code {
     padding: 1rem;
     padding-top: .5rem; }
     .stellar.folding > .body > :first-child {
-      margin-top: 0 !important; }
+      margin-top: 0; }
       .stellar.folding > .body > :first-child > :first-child {
-        margin-top: 0 !important; }
+        margin-top: 0; }
         .stellar.folding > .body > :first-child > :first-child > :first-child {
-          margin-top: 0 !important; }
+          margin-top: 0; }
           .stellar.folding > .body > :first-child > :first-child > :first-child > :first-child {
-            margin-top: 0 !important; }
+            margin-top: 0; }
     .stellar.folding > .body > :last-child {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0; }
       .stellar.folding > .body > :last-child > :last-child {
-        margin-bottom: 0 !important; }
+        margin-bottom: 0; }
         .stellar.folding > .body > :last-child > :last-child > :last-child {
-          margin-bottom: 0 !important; }
+          margin-bottom: 0; }
           .stellar.folding > .body > :last-child > :last-child > :last-child > :last-child {
-            margin-bottom: 0 !important; }
+            margin-bottom: 0; }
     .stellar.folding > .body code {
       color: var(--text-code);
       background: var(--theme-bg1); }
@@ -236,21 +236,21 @@ body, input, code {
       margin: .75rem 0;
       padding: .5rem 0; }
       .stellar.poetry > .inner > .body > :first-child {
-        margin-top: 0 !important; }
+        margin-top: 0; }
         .stellar.poetry > .inner > .body > :first-child > :first-child {
-          margin-top: 0 !important; }
+          margin-top: 0; }
           .stellar.poetry > .inner > .body > :first-child > :first-child > :first-child {
-            margin-top: 0 !important; }
+            margin-top: 0; }
             .stellar.poetry > .inner > .body > :first-child > :first-child > :first-child > :first-child {
-              margin-top: 0 !important; }
+              margin-top: 0; }
       .stellar.poetry > .inner > .body > :last-child {
-        margin-bottom: 0 !important; }
+        margin-bottom: 0; }
         .stellar.poetry > .inner > .body > :last-child > :last-child {
-          margin-bottom: 0 !important; }
+          margin-bottom: 0; }
           .stellar.poetry > .inner > .body > :last-child > :last-child > :last-child {
-            margin-bottom: 0 !important; }
+            margin-bottom: 0; }
             .stellar.poetry > .inner > .body > :last-child > :last-child > :last-child > :last-child {
-              margin-bottom: 0 !important; }
+              margin-bottom: 0; }
       .stellar.poetry > .inner > .body p {
         font-size: 14px;
         margin: 5px 0; }

@@ -15,39 +15,47 @@ SelectText = (el) => {
     }
 }
 
-$(".highlight > .board > .clipboard").each((id, el) => {
-    var $el = $(el)
-    $el.click(() => {
-        if ($el.hasClass("active"))
+$(".highlight").each( (id, codeblock) => {
+    var $codeblock  = $(codeblock);
+    var $board      = $codeblock.find(".board");
+    var $clip       = $board.find(".clipboard");
+    var $edit       = $board.find(".edit");
+    var $pre        = $codeblock.find("pre").eq($codeblock.has(".chroma").length);
+    
+    $clip.click( () => {
+        if ($clip.hasClass("active"))
             return;
-
-        SelectText($el.parent().parent().filter("pre")[0]);
-        SelectText($el.parent().parent().find("pre")[1]);
-
+        SelectText($pre[0]);
         document.execCommand("copy");
-        $el.addClass("active");
+        $clip.addClass("active");
         setTimeout( () => {
-            $el.removeClass("active")
+            $clip.removeClass("active")
         }, 1000);
-    })
-})
+    });
 
-$(".highlight > .board > .edit").each((id, el) => {
-    var $el = $(el);
-    var $pre = $el.parent().parent().find("pre").eq(1);
-    $el.click(() => {
-        if (! $el.hasClass("active")) {
-            $el.addClass("active");
-            $el.parent().addClass("active");
+    $edit.click( () => {
+        if (! $edit.hasClass("active")) {
+            $edit.addClass("active");
+            $board.addClass("active");
             $pre.attr("contenteditable", "true")
                 .attr("style", "background: white !important")
                 .focus();
         }
         else {
-            $el.removeClass("active");
-            $el.parent().removeClass("active");
+            $edit.removeClass("active");
+            $board.removeClass("active");
             $pre.attr("contenteditable", "false")
                 .attr("style", "");
         }
-    })
-})
+    });
+});
+
+$(".stellar.copy-area").each( (id, el) => {
+    var $el = $(el);
+    var $clip = $el.find(".clipboard");
+    var $pre = $el.find("pre");
+    $clip.click( () => {
+        SelectText($pre[0]);
+        document.execCommand("copy");
+    });
+});

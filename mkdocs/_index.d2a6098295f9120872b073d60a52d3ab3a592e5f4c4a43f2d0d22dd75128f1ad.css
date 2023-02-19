@@ -39,21 +39,21 @@ body, input, code {
     font-size: 95%;
     padding: .7rem 1rem; }
     .mkdocs.hint > .inner > :first-child {
-      margin-top: 0 !important; }
+      margin-top: 0; }
       .mkdocs.hint > .inner > :first-child > :first-child {
-        margin-top: 0 !important; }
+        margin-top: 0; }
         .mkdocs.hint > .inner > :first-child > :first-child > :first-child {
-          margin-top: 0 !important; }
+          margin-top: 0; }
           .mkdocs.hint > .inner > :first-child > :first-child > :first-child > :first-child {
-            margin-top: 0 !important; }
+            margin-top: 0; }
     .mkdocs.hint > .inner > :last-child {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0; }
       .mkdocs.hint > .inner > :last-child > :last-child {
-        margin-bottom: 0 !important; }
+        margin-bottom: 0; }
         .mkdocs.hint > .inner > :last-child > :last-child > :last-child {
-          margin-bottom: 0 !important; }
+          margin-bottom: 0; }
           .mkdocs.hint > .inner > :last-child > :last-child > :last-child > :last-child {
-            margin-bottom: 0 !important; }
+            margin-bottom: 0; }
   .mkdocs.hint[open] > .title > img.arrow {
     transform: rotate(90deg); }
   .mkdocs.hint.note {
@@ -138,21 +138,21 @@ body, input, code {
     width: 0;
     margin: 0 .5rem; }
     .mkdocs.columns > .inner > :first-child {
-      margin-top: 0 !important; }
+      margin-top: 0; }
       .mkdocs.columns > .inner > :first-child > :first-child {
-        margin-top: 0 !important; }
+        margin-top: 0; }
         .mkdocs.columns > .inner > :first-child > :first-child > :first-child {
-          margin-top: 0 !important; }
+          margin-top: 0; }
           .mkdocs.columns > .inner > :first-child > :first-child > :first-child > :first-child {
-            margin-top: 0 !important; }
+            margin-top: 0; }
     .mkdocs.columns > .inner > :last-child {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0; }
       .mkdocs.columns > .inner > :last-child > :last-child {
-        margin-bottom: 0 !important; }
+        margin-bottom: 0; }
         .mkdocs.columns > .inner > :last-child > :last-child > :last-child {
-          margin-bottom: 0 !important; }
+          margin-bottom: 0; }
           .mkdocs.columns > .inner > :last-child > :last-child > :last-child > :last-child {
-            margin-bottom: 0 !important; }
+            margin-bottom: 0; }
     .mkdocs.columns > .inner:first-of-type {
       margin-left: 0; }
     .mkdocs.columns > .inner:last-of-type {
@@ -213,21 +213,21 @@ body, input, code {
     width: 100%;
     display: none; }
     .mkdocs.tabsets > .inner > :first-child {
-      margin-top: 0 !important; }
+      margin-top: 0; }
       .mkdocs.tabsets > .inner > :first-child > :first-child {
-        margin-top: 0 !important; }
+        margin-top: 0; }
         .mkdocs.tabsets > .inner > :first-child > :first-child > :first-child {
-          margin-top: 0 !important; }
+          margin-top: 0; }
           .mkdocs.tabsets > .inner > :first-child > :first-child > :first-child > :first-child {
-            margin-top: 0 !important; }
+            margin-top: 0; }
     .mkdocs.tabsets > .inner > :last-child {
-      margin-bottom: 0 !important; }
+      margin-bottom: 0; }
       .mkdocs.tabsets > .inner > :last-child > :last-child {
-        margin-bottom: 0 !important; }
+        margin-bottom: 0; }
         .mkdocs.tabsets > .inner > :last-child > :last-child > :last-child {
-          margin-bottom: 0 !important; }
+          margin-bottom: 0; }
           .mkdocs.tabsets > .inner > :last-child > :last-child > :last-child > :last-child {
-            margin-bottom: 0 !important; }
+            margin-bottom: 0; }
   .mkdocs.tabsets > input[type="radio"] {
     display: none; }
     .mkdocs.tabsets > input[type="radio"]:checked + .label {

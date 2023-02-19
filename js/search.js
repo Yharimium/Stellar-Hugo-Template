@@ -48,13 +48,13 @@
             html = "";
 
         for (item of $items) {
-            var $item = $(item)
-                title   = $item.find("title").html(),
-                link    = $item.find("url").html(),
-                content = $item.find("description").html(),
+            var $item = $(item);
+            var title   = $item.find("title").html();
+            var link    = $item.find("url").html();
+            var content = $item.find("description").html();
 
-                text    = title + content,
-                index   = text.toLowerCase().indexOf(key.toLowerCase());
+            var text    = title + content;
+            var index   = text.toLowerCase().indexOf(key.toLowerCase());
 
             if (index > -1) {
                 cnt ++;
