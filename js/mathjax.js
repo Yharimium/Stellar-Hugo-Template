@@ -9,48 +9,17 @@ MathJax = {
     SVG: {
         blacker: 7,
         showMathMenu: false,
-        undefinedFamily: "var(--font-stack)",
-        linebreaks: { automatic: true },
-        scale: 85,
+        undefinedFamily: "inherit",
+        // linebreaks: { automatic: true },
+        scale: 90,
         styles: {
             "text": {
-                "font-size": "calc(100% / 0.85)",
+                "font-size": "calc(100% / 0.9)",
             }
         }
     },
     "fast-preview": {
         disabled: true
-    },
-    TeX: {
-        extensions: ['autoload-all.js', '/js/xypic.js'],
-        Macros: {
-            d: "\\text{d}",
-            degree: "^\\circ",
-            dis: "\\text{dis}",
-            disp: "\\displaystyle",
-            eq: "\\Longleftrightarrow",
-            intro: "\\Longrightarrow",
-            longequal: "=\\!=",
-            margin: "\\textcolor{transparent}{1}",
-            mex: "\\text\{mex\}",
-            no: "\\times",
-            wave: "\\sim",
-            vec: "\\overrightarrow",
-            yes: "\\surd",
-        }
-    },
-    AuthorInit: function () {
-        var REPLACEMENT = [
-            [",", "\{\\unicode{0x2C} \\ \\ \}"],
-            [/\\node/g, "*+[o][F-]{\\color{transparent}o}"]
-        ];
-        MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
-            MathJax.InputJax.TeX.prefilterHooks.Add(function (data) {
-                for (const it of REPLACEMENT)
-                    data.math = data.math.replaceAll(it[0], it[1]);
-                data.math = `\\displaystyle \{ ${data.math} \}`;
-            });
-        });
     },
 };
 
