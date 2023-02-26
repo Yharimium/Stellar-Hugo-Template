@@ -1,13 +1,13 @@
 :root {
   --width-side: 300px;
   --width-main: 720px;
-  --radius: 4px;
-  --site-bg: #f9fafb;
-  --bar: #1cd0fd;
-  --card: #ffffff;
-  --block: #f1f2f3;
-  --border: #e3e5e8;
-  --hover: #e9eaec;
+  --border-radius: 4px;
+  --bg-site: #f9fafb;
+  --bg-line: #1cd0fd;
+  --bg-card: #ffffff;
+  --bg-blk: #f1f2f3;
+  --bg-hov: #e9eaec;
+  --bg-border: #e3e5e8;
   --text-p0: #000;
   --text-p1: #333;
   --text-p2: #4d4d4d;
@@ -15,21 +15,20 @@
   --text-p4: #999;
   --text-meta: #ccc;
   --text-warn: #f53900;
-  --text-codespan: #66b2ff26;
+  --text-code: #66b2ff26;
   --text-link: #2385d5;
-  --text-link-hover: #8bc1ec;
-  --shadow: 0 0 2px 0 rgba(0,0,0,.04), 0 0 8px 0 rgba(0,0,0,.04);
-  --shadow-hover: 0 1px 4px 0 rgba(0,0,0,.1), 0 4px 16px 0 rgba(0,0,0,.1);
-  --shadow-block: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  --shadow-block-hover: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+  --text-link-hov: #8bc1ec;
+  --shdw: 0 0 2px 0 rgba(0,0,0,.04), 0 0 8px 0 rgba(0,0,0,.04);
+  --shdw-hov: 0 1px 4px 0 rgba(0,0,0,.1), 0 4px 16px 0 rgba(0,0,0,.1);
+  --shdw-bold: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: #1c1e21;
-    --card: #373d43;
-    --block: #26292c;
-    --border: #383d42;
-    --hover: #2f3337;
+    --bg-site: #1c1e21;
+    --bg-card: #373d43;
+    --bg-blk: #26292c;
+    --bg-border: #383d42;
+    --bg-hov: #2f3337;
     --text-p0: #fff;
     --text-p1: #ccc;
     --text-p2: #b3b3b3;
@@ -37,16 +36,16 @@
     --text-p4: #707070;
     --text-meta: #4d4d4d;
     --text-warn: #ff6333;
-    --text-codespan: #21222c;
+    --text-code: #21222c;
     --text-link: #03cafc;
-    --text-link-hover: #2385d5; } }
+    --text-link-hov: #2385d5; } }
 
 .mkdocs.hint {
   border-left: 4px solid;
-  border-radius: var(--radius);
+  border-radius: var(--border-radius);
   margin: 1rem 0;
-  box-shadow: var(--shadow-block);
-  background: var(--card);
+  box-shadow: var(--shdw-bold);
+  background: var(--bg-card);
   overflow: hidden; }
   .mkdocs.hint > .title {
     font-size: 13px;
@@ -191,7 +190,7 @@
 
 @media (prefers-color-scheme: dark) {
   .mkdocs.hint > .inner {
-    background: var(--block); } }
+    background: var(--bg-blk); } }
 
 .mkdocs.columns {
   display: flex;
@@ -231,16 +230,16 @@
       .columns .inner + .inner {
         margin-top: 1rem !important; } }
 
-.mkdocs.tabsets {
+.mkdocs.tabs {
   margin: 1rem 0;
   overflow: visible;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-  .mkdocs.tabsets > .label {
+  .mkdocs.tabs > .label {
     font-size: 13px;
     color: var(--text-p3);
-    border-radius: var(--radius);
+    border-radius: var(--border-radius);
     cursor: pointer;
     position: relative;
     padding: 0 1rem;
@@ -249,18 +248,18 @@
     line-height: 2;
     text-align: center;
     white-space: nowrap; }
-    .mkdocs.tabsets > .label.disabled {
+    .mkdocs.tabs > .label.disabled {
       pointer-events: none; }
-    .mkdocs.tabsets > .label:first-of-type.disabled {
+    .mkdocs.tabs > .label:first-of-type.disabled {
       padding-left: 1rem; }
-    .mkdocs.tabsets > .label:last-of-type.disabled {
+    .mkdocs.tabs > .label:last-of-type.disabled {
       padding-right: 1rem; }
-    .mkdocs.tabsets > .label:not(.active):hover {
+    .mkdocs.tabs > .label:not(.active):hover {
       color: var(--text-p0);
-      background: var(--hover); }
-    .mkdocs.tabsets > .label::after {
+      background: var(--bg-hov); }
+    .mkdocs.tabs > .label::after {
       will-change: transform;
-      border-radius: var(--radius);
+      border-radius: var(--border-radius);
       content: '';
       pointer-events: none;
       cursor: default;
@@ -269,38 +268,38 @@
       bottom: -.5rem;
       left: -.6rem;
       right: 0;
-      background: var(--hover); }
-    .mkdocs.tabsets > .label:first-of-type::after {
+      background: var(--bg-hov); }
+    .mkdocs.tabs > .label:first-of-type::after {
       left: 0; }
-  .mkdocs.tabsets > .inner {
+  .mkdocs.tabs > .inner {
     order: 999;
     width: 100%;
     display: none; }
-    .mkdocs.tabsets > .inner > :first-child {
+    .mkdocs.tabs > .inner > :first-child {
       margin-top: 0; }
-      .mkdocs.tabsets > .inner > :first-child > :first-child {
+      .mkdocs.tabs > .inner > :first-child > :first-child {
         margin-top: 0; }
-        .mkdocs.tabsets > .inner > :first-child > :first-child > :first-child {
+        .mkdocs.tabs > .inner > :first-child > :first-child > :first-child {
           margin-top: 0; }
-          .mkdocs.tabsets > .inner > :first-child > :first-child > :first-child > :first-child {
+          .mkdocs.tabs > .inner > :first-child > :first-child > :first-child > :first-child {
             margin-top: 0; }
-    .mkdocs.tabsets > .inner > :last-child {
+    .mkdocs.tabs > .inner > :last-child {
       margin-bottom: 0; }
-      .mkdocs.tabsets > .inner > :last-child > :last-child {
+      .mkdocs.tabs > .inner > :last-child > :last-child {
         margin-bottom: 0; }
-        .mkdocs.tabsets > .inner > :last-child > :last-child > :last-child {
+        .mkdocs.tabs > .inner > :last-child > :last-child > :last-child {
           margin-bottom: 0; }
-          .mkdocs.tabsets > .inner > :last-child > :last-child > :last-child > :last-child {
+          .mkdocs.tabs > .inner > :last-child > :last-child > :last-child > :last-child {
             margin-bottom: 0; }
-  .mkdocs.tabsets > input[type="radio"] {
+  .mkdocs.tabs > input[type="radio"] {
     display: none; }
-    .mkdocs.tabsets > input[type="radio"]:checked + .label {
+    .mkdocs.tabs > input[type="radio"]:checked + .label {
       color: var(--text-p0);
-      background: var(--card);
-      box-shadow: var(--shadow-block); }
-      .mkdocs.tabsets > input[type="radio"]:checked + .label::before {
+      background: var(--bg-card);
+      box-shadow: var(--shdw-bold); }
+      .mkdocs.tabs > input[type="radio"]:checked + .label::before {
         will-change: transform;
-        border-radius: var(--radius);
+        border-radius: var(--border-radius);
         content: '';
         pointer-events: none;
         cursor: default;
@@ -310,6 +309,6 @@
         bottom: -.5rem;
         left: .7rem;
         right: .7rem;
-        background: var(--bar); }
-      .mkdocs.tabsets > input[type="radio"]:checked + .label + .inner {
+        background: var(--bg-line); }
+      .mkdocs.tabs > input[type="radio"]:checked + .label + .inner {
         display: block; }

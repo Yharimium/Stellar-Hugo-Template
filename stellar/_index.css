@@ -1,13 +1,13 @@
 :root {
   --width-side: 300px;
   --width-main: 720px;
-  --radius: 4px;
-  --site-bg: #f9fafb;
-  --bar: #1cd0fd;
-  --card: #ffffff;
-  --block: #f1f2f3;
-  --border: #e3e5e8;
-  --hover: #e9eaec;
+  --border-radius: 4px;
+  --bg-site: #f9fafb;
+  --bg-line: #1cd0fd;
+  --bg-card: #ffffff;
+  --bg-blk: #f1f2f3;
+  --bg-hov: #e9eaec;
+  --bg-border: #e3e5e8;
   --text-p0: #000;
   --text-p1: #333;
   --text-p2: #4d4d4d;
@@ -15,21 +15,20 @@
   --text-p4: #999;
   --text-meta: #ccc;
   --text-warn: #f53900;
-  --text-codespan: #66b2ff26;
+  --text-code: #66b2ff26;
   --text-link: #2385d5;
-  --text-link-hover: #8bc1ec;
-  --shadow: 0 0 2px 0 rgba(0,0,0,.04), 0 0 8px 0 rgba(0,0,0,.04);
-  --shadow-hover: 0 1px 4px 0 rgba(0,0,0,.1), 0 4px 16px 0 rgba(0,0,0,.1);
-  --shadow-block: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  --shadow-block-hover: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; }
+  --text-link-hov: #8bc1ec;
+  --shdw: 0 0 2px 0 rgba(0,0,0,.04), 0 0 8px 0 rgba(0,0,0,.04);
+  --shdw-hov: 0 1px 4px 0 rgba(0,0,0,.1), 0 4px 16px 0 rgba(0,0,0,.1);
+  --shdw-bold: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --site-bg: #1c1e21;
-    --card: #373d43;
-    --block: #26292c;
-    --border: #383d42;
-    --hover: #2f3337;
+    --bg-site: #1c1e21;
+    --bg-card: #373d43;
+    --bg-blk: #26292c;
+    --bg-border: #383d42;
+    --bg-hov: #2f3337;
     --text-p0: #fff;
     --text-p1: #ccc;
     --text-p2: #b3b3b3;
@@ -37,13 +36,13 @@
     --text-p4: #707070;
     --text-meta: #4d4d4d;
     --text-warn: #ff6333;
-    --text-codespan: #21222c;
+    --text-code: #21222c;
     --text-link: #03cafc;
-    --text-link-hover: #2385d5; } }
+    --text-link-hov: #2385d5; } }
 
 .stellar.note {
   border: 1px solid var(--theme-border);
-  border-radius: var(--radius);
+  border-radius: var(--border-radius);
   margin: 1rem 0;
   padding: .5rem 1rem;
   background: var(--theme-bg2);
@@ -70,7 +69,6 @@
   .stellar.note > .inner {
     font-size: 95%; }
     .stellar.note > .inner code {
-      color: var(--text-code);
       background: var(--theme-bg1); }
 
 .stellar.mark {
@@ -100,14 +98,14 @@
   display: flex;
   margin: 1rem 0; }
   .stellar.copy-area pre {
-    border: 1px solid var(--border);
+    border: 1px solid var(--bg-border);
     border-radius: 4px !important;
     display: inline-block;
     max-width: 100%;
     overflow: hidden;
     padding: 3px .5rem;
     margin: 0;
-    background: var(--block);
+    background: var(--bg-blk);
     position: relative; }
     .stellar.copy-area pre code {
       display: block;
@@ -118,7 +116,7 @@
         height: 0;
         width: 0; }
     .stellar.copy-area pre .clipboard {
-      border-left: 1px solid var(--border);
+      border-left: 1px solid var(--bg-border);
       -moz-transition: background, 0.1s;
       -webkit-transition: background, 0.1s;
       -o-transition: background, 0.1s;
@@ -130,14 +128,14 @@
       right: 0;
       height: 100%;
       padding: 0 .3rem;
-      background: var(--hover);
+      background: var(--bg-hov);
       align-items: center; }
       .stellar.copy-area pre .clipboard img {
         width: 1.2rem;
         height: 1.2rem;
         opacity: 1 !important; }
       .stellar.copy-area pre .clipboard:hover, .stellar.copy-area pre .clipboard.active {
-        background: var(--card); }
+        background: var(--bg-card); }
 
 .stellar.radio-box input[type=radio] {
   border-radius: 50%;
@@ -189,7 +187,7 @@
 
 .stellar.folding {
   border: 1px solid var(--theme-border);
-  border-radius: var(--radius);
+  border-radius: var(--border-radius);
   background: var(--theme-bg2);
   margin: 1rem 0; }
   .stellar.folding > summary {
@@ -229,7 +227,6 @@
           .stellar.folding > .body > :last-child > :last-child > :last-child > :last-child {
             margin-bottom: 0; }
     .stellar.folding > .body code {
-      color: var(--text-code);
       background: var(--theme-bg1); }
     .stellar.folding > .body > .highlight {
       border: 1px solid var(--theme-border); }
@@ -251,7 +248,7 @@
       top: 4px;
       bottom: 4px;
       border-radius: 4px;
-      background: var(--block); }
+      background: var(--bg-blk); }
     .stellar.poetry > .inner > .title {
       padding-top: .75rem;
       position: relative; }
@@ -269,8 +266,8 @@
       color: var(--text-p2);
       margin-top: 4px; }
     .stellar.poetry > .inner > .body {
-      border-top: 1px dashed var(--border);
-      border-bottom: 1px dashed var(--border);
+      border-top: 1px dashed var(--bg-border);
+      border-bottom: 1px dashed var(--bg-border);
       margin: .75rem 0;
       padding: .5rem 0; }
       .stellar.poetry > .inner > .body > :first-child {
@@ -380,7 +377,7 @@
   --text-p1: #111;
   --text-p2: #1f1f1f;
   --text-p3: #555;
-  --text-codespan: #000; }
+  --text-code: #000; }
 
 .stellar[color=dark] {
   --theme-bg1: #1f1f1f;
@@ -390,7 +387,7 @@
   --text-p1: #fff;
   --text-p2: #e0e0e0;
   --text-p3: #ddd;
-  --text-codespan: #fff; }
+  --text-code: #fff; }
 
 .stellar[color=warning] {
   --theme: #ffbd2b;
@@ -409,7 +406,7 @@
   --text-p1: #fff;
   --text-p2: #e0e0e0;
   --text-p3: #ddd;
-  --text-codespan: #fff; }
+  --text-code: #fff; }
 
 @media (prefers-color-scheme: dark) {
   .stellar {
@@ -492,7 +489,7 @@
     --text-p1: #111;
     --text-p2: #1f1f1f;
     --text-p3: #555;
-    --text-codespan: #fff
+    --text-code: #fff
     ; }
   .stellar[color=dark] {
     --theme-border: #000;
@@ -502,12 +499,12 @@
     --text-p1: #fff;
     --text-p2: #e0e0e0;
     --text-p3: #ddd;
-    --text-codespan: #fff
+    --text-code: #fff
     ; }
   .stellar[color=light], .stellar[color=warning] {
     --text-p0: #000;
     --text-p1: #111;
     --text-p2: #1f1f1f;
     --text-p3: #555;
-    --text-codespan: #fff
+    --text-code: #fff
     ; } }
