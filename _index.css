@@ -696,7 +696,7 @@ hr {
   /* GenericUnderline */
   /* TextWhitespace */ }
 
-.LBody > .Main .list.tags .card:hover, .LBody > .Main .list .item, .LBody > .Main > .tabs .nav .tab, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents #TableOfContents li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents.toc .content ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents .widgets > .widget.toc .content ul li > a, .LBody > .Side .widgets > .widget.toc .content .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a, .LBody > .Side .widgets > .widget.toc .content ul li > a, .LBody > .Main .list.tags .card, .LBody > .Main .list .item:not(.dir):hover, .LBody > .Main > .tabs .nav .tab:not(.active):hover, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a:hover, .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a:hover, .LBody > .Main > .tabs .nav .tab.active {
+.header .menu .nav-item.active, .header .menu .nav-item:hover, .LBody > .Main .list.tags .card:hover, .LBody > .Side .header .menu .nav-item.active, .LBody > .Side .header .menu .nav-item:hover, .header .menu .nav-item, .LBody > .Main .list .item, .LBody > .Main > .tabs .nav .tab, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents #TableOfContents li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents.toc .content ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents .widgets > .widget.toc .content ul li > a, .LBody > .Side .widgets > .widget.toc .content .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a, .LBody > .Side .widgets > .widget.toc .content ul li > a, .LBody > .Side .header .menu .nav-item, .LBody > .Main .list.tags .card, .LBody > .Main .list .item:not(.dir):hover, .LBody > .Main > .tabs .nav .tab:not(.active):hover, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a:hover, .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a:hover, .LBody > .Main > .tabs .nav .tab.active {
   position: relative;
   color: var(--text-p1);
   border-radius: var(--border-radius);
@@ -713,7 +713,7 @@ hr {
   .LBody > .Main .list.tags .card {
     background: var(--bg-blk);
     box-shadow: none; }
-  .LBody > .Main .list .item, .LBody > .Main > .tabs .nav .tab, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents #TableOfContents li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents.toc .content ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents .widgets > .widget.toc .content ul li > a, .LBody > .Side .widgets > .widget.toc .content .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a, .LBody > .Side .widgets > .widget.toc .content ul li > a {
+  .header .menu .nav-item, .LBody > .Main .list .item, .LBody > .Main > .tabs .nav .tab, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents #TableOfContents li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents.toc .content ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents .widgets > .widget.toc .content ul li > a, .LBody > .Side .widgets > .widget.toc .content .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul li > a, .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a, .LBody > .Side .widgets > .widget.toc .content ul li > a, .LBody > .Side .header .menu .nav-item {
     color: var(--text-p3);
     background: none;
     box-shadow: none; }
@@ -952,7 +952,7 @@ body {
         position: relative;
         white-space: nowrap; }
         .LBody > .Side .mobile-only.topic a.title .text, .LBody > .Side .header .topic a.title .text, .header .LBody > .Side .topic a.title .text {
-          font-size: 27px;
+          font-size: 30px;
           font-weight: bold;
           color: var(--text-p0);
           line-height: 2rem; }
@@ -997,20 +997,11 @@ body {
         display: flex; }
         .LBody > .Side .header .menu .nav-item {
           font-size: 14px;
-          color: var(--text-p3);
-          border-radius: var(--border-radius);
           flex-grow: 1;
+          text-align: center;
           text-overflow: ellipsis;
-          padding: .375rem .5rem;
-          margin: 1px;
-          overflow: hidden;
-          text-align: center; }
-          .LBody > .Side .header .menu .nav-item.active, .LBody > .Side .header .menu .nav-item:hover {
-            color: var(--text-p1);
-            background: var(--bg-card);
-            box-shadow: var(--shdw); }
-          .LBody > .Side .header .menu .nav-item + .nav-item {
-            margin-right: .5px; }
+          margin: .05rem;
+          overflow: hidden; }
     .LBody > .Side .footer {
       margin: 1rem; }
       .LBody > .Side .footer .social {
@@ -1060,7 +1051,8 @@ body {
               width: 100%;
               padding: .5rem 0 .5rem 1.5rem;
               color: var(--text-p0);
-              background: none; }
+              background: none;
+              line-height: 1rem; }
             .LBody > .Side .widgets > .widget.search .search-form .search-icon {
               position: absolute;
               width: 1rem;
@@ -1309,7 +1301,7 @@ body {
         color: var(--text-p3);
         display: flex;
         position: relative;
-        margin: .5rem 0;
+        margin-top: .5rem;
         padding: .5rem 1rem;
         overflow: scroll hidden; }
         .LBody > .Main > .tabs .nav::-webkit-scrollbar {
@@ -1334,7 +1326,9 @@ body {
         background: var(--bg-card);
         margin: 1rem 0;
         padding: 1rem;
-        box-shadow: var(--shdw); }
+        position: relative;
+        box-shadow: var(--shdw);
+        overflow: hidden; }
         .LBody > .Main > .posts .card .title, .LBody > .Main > .projects .card .title {
           font-size: 22px;
           font-weight: normal;
@@ -1347,6 +1341,22 @@ body {
           font-size: 13px;
           color: var(--text-p3);
           margin-top: .5rem; }
+        .LBody > .Main > .posts .card .link-bg, .LBody > .Main > .projects .card .link-bg {
+          --sz: 2rem;
+          position: absolute;
+          top: calc(0rem - var(--sz));
+          right: calc(0rem - var(--sz));
+          width: 0px;
+          height: 0px;
+          border: var(--sz) solid transparent;
+          border-bottom-color: var(--bg-hov);
+          transform: rotate(45deg); }
+        .LBody > .Main > .posts .card .link, .LBody > .Main > .projects .card .link {
+          font-size: 14px;
+          color: var(--text-p3);
+          position: absolute;
+          top: .35rem;
+          right: .35rem; }
         .LBody > .Main > .posts .card:hover, .LBody > .Main > .projects .card:hover {
           box-shadow: var(--shdw-hov); }
     .LBody > .Main .projects .project {
@@ -1635,7 +1645,7 @@ body {
     position: relative;
     white-space: nowrap; }
     .mobile-only.topic a.title .text, .header .topic a.title .text {
-      font-size: 27px;
+      font-size: 30px;
       font-weight: bold;
       color: var(--text-p0);
       line-height: 2rem; }
@@ -1681,20 +1691,11 @@ body {
     display: flex; }
     .header .menu .nav-item {
       font-size: 14px;
-      color: var(--text-p3);
-      border-radius: var(--border-radius);
       flex-grow: 1;
+      text-align: center;
       text-overflow: ellipsis;
-      padding: .375rem .5rem;
-      margin: 1px;
-      overflow: hidden;
-      text-align: center; }
-      .header .menu .nav-item.active, .header .menu .nav-item:hover {
-        color: var(--text-p1);
-        background: var(--bg-card);
-        box-shadow: var(--shdw); }
-      .header .menu .nav-item + .nav-item {
-        margin-right: .5px; }
+      margin: .05rem;
+      overflow: hidden; }
 
 .mobile-only {
   display: none !important; }
