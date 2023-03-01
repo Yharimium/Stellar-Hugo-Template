@@ -113,6 +113,16 @@ body, input, button {
   color: #000;
   background-color: #CCE2FF; }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--border-radius);
+  background: var(--text-meta); }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-p4); }
+
 a {
   -moz-transition: color 0.15s;
   -webkit-transition: color 0.15s;
@@ -131,6 +141,9 @@ ul {
 hr {
   border: none;
   border-bottom: 1px solid var(--bg-border); }
+
+.fancybox__content img, .f-thumbs__slide__button img {
+  background: #fff; }
 
 @keyframes rotate {
   100% {
@@ -676,7 +689,8 @@ hr {
   /* Generic */
   /* GenericDeleted */
   .chroma .gd {
-    color: #f92672; }
+    color: #ffdcd7;
+    background: #67060c; }
   /* GenericEmph */
   .chroma .ge {
     font-style: italic; }
@@ -684,7 +698,8 @@ hr {
   /* GenericHeading */
   /* GenericInserted */
   .chroma .gi {
-    color: #a6e22e; }
+    color: #aff5b5;
+    background: #023a16; }
   /* GenericOutput */
   /* GenericPrompt */
   /* GenericStrong */
@@ -839,6 +854,70 @@ hr {
   .markdown [compress="true"].highlight > pre {
     max-height: 10rem; }
 
+.mobile-only.info, .LBody > .Side .header .info {
+  display: flex;
+  --sz: 50px; }
+  .mobile-only.info > .avatar, .LBody > .Side .header .info > .avatar {
+    will-change: transform;
+    border-radius: 100%;
+    width: var(--sz);
+    height: var(--sz);
+    flex: 0 0 var(--sz);
+    overflow: hidden;
+    margin-right: 1rem; }
+    .mobile-only.info > .avatar > .bg, .LBody > .Side .header .info > .avatar > .bg {
+      -moz-transition: opacity 0.2s ease;
+      -webkit-transition: opacity 0.2s ease;
+      -o-transition: opacity 0.2s ease;
+      transition: opacity 0.2s ease;
+      position: absolute;
+      z-index: -1;
+      width: var(--sz);
+      height: var(--sz); }
+      .mobile-only.info > .avatar > .bg.rainbow, .LBody > .Side .header .info > .avatar > .bg.rainbow {
+        opacity: 0;
+        background-size: cover; }
+      .mobile-only.info > .avatar > .bg.shadow, .LBody > .Side .header .info > .avatar > .bg.shadow {
+        border-radius: 100%;
+        background: var(--bg-hov); }
+    .mobile-only.info > .avatar img.avatar, .LBody > .Side .header .info > .avatar img.avatar {
+      border-radius: 100%;
+      margin: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      background-color: white; }
+    .mobile-only.info > .avatar:hover > .bg.rainbow, .LBody > .Side .header .info > .avatar:hover > .bg.rainbow {
+      opacity: 1;
+      animation: rotate 2.5s infinite linear; }
+  .mobile-only.info > .title, .LBody > .Side .header .info > .title {
+    flex-grow: 1;
+    position: relative;
+    white-space: nowrap; }
+    .mobile-only.info > .title .text, .LBody > .Side .header .info > .title .text {
+      font-size: 30px;
+      font-weight: bold;
+      color: var(--text-p0);
+      line-height: 2rem; }
+    .mobile-only.info > .title .sub, .LBody > .Side .header .info > .title .sub {
+      -moz-transition: transform, opacity, 0.2s ease-out;
+      -webkit-transition: transform, opacity, 0.2s ease-out;
+      -o-transition: transform, opacity, 0.2s ease-out;
+      transition: transform, opacity, 0.2s ease-out;
+      font-size: 13px;
+      color: var(--text-p0);
+      line-height: 1rem;
+      position: absolute;
+      white-space: nowrap; }
+      .mobile-only.info > .title .sub.dw, .LBody > .Side .header .info > .title .sub.dw {
+        transform: translateY(8px);
+        opacity: 0; }
+    .mobile-only.info > .title:hover .dw, .LBody > .Side .header .info > .title:hover .dw {
+      transform: translateY(0);
+      opacity: 1; }
+    .mobile-only.info > .title:hover .up, .LBody > .Side .header .info > .title:hover .up {
+      transform: translateY(-8px);
+      opacity: 0; }
+
 .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a.active::after, .LBody > .Side .widgets > .widget.toc .content #TableOfContents li > a.active::after, .LBody > .Side .widgets > .widget.tree .item #TableOfContents ul::after, .LBody > .Side .widgets > .widget.toc .content #TableOfContents ul::after, .LBody > .Main > .tabs::after, .LBody > .Main > .tabs .nav .tab.active::after {
   border-radius: var(--border-radius);
   content: '';
@@ -917,69 +996,6 @@ body {
     width: var(--width-side);
     height: 100vh;
     margin-right: 1rem; }
-    .LBody > .Side .mobile-only.info, .LBody > .Side .header .info {
-      display: flex;
-      --sz: 50px; }
-      .LBody > .Side .mobile-only.info > .avatar, .LBody > .Side .header .info > .avatar {
-        will-change: transform;
-        border-radius: 100%;
-        width: var(--sz);
-        height: var(--sz);
-        flex: 0 0 var(--sz);
-        overflow: hidden;
-        margin-right: 1rem; }
-        .LBody > .Side .mobile-only.info > .avatar > .bg, .LBody > .Side .header .info > .avatar > .bg {
-          -moz-transition: opacity 0.2s ease;
-          -webkit-transition: opacity 0.2s ease;
-          -o-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
-          position: absolute;
-          z-index: -1;
-          width: var(--sz);
-          height: var(--sz); }
-          .LBody > .Side .mobile-only.info > .avatar > .bg.rainbow, .LBody > .Side .header .info > .avatar > .bg.rainbow {
-            opacity: 0;
-            background-size: cover; }
-          .LBody > .Side .mobile-only.info > .avatar > .bg.shadow, .LBody > .Side .header .info > .avatar > .bg.shadow {
-            border-radius: 100%;
-            background: var(--bg-hov); }
-        .LBody > .Side .mobile-only.info > .avatar img.avatar, .LBody > .Side .header .info > .avatar img.avatar {
-          border-radius: 100%;
-          margin: 2px;
-          width: calc(100% - 4px);
-          height: calc(100% - 4px);
-          background-color: white; }
-        .LBody > .Side .mobile-only.info > .avatar:hover > .bg.rainbow, .LBody > .Side .header .info > .avatar:hover > .bg.rainbow {
-          opacity: 1;
-          animation: rotate 2.5s infinite linear; }
-      .LBody > .Side .mobile-only.info > .title, .LBody > .Side .header .info > .title {
-        flex-grow: 1;
-        position: relative;
-        white-space: nowrap; }
-        .LBody > .Side .mobile-only.info > .title .text, .LBody > .Side .header .info > .title .text {
-          font-size: 30px;
-          font-weight: bold;
-          color: var(--text-p0);
-          line-height: 2rem; }
-        .LBody > .Side .mobile-only.info > .title .sub, .LBody > .Side .header .info > .title .sub {
-          -moz-transition: transform, opacity, 0.2s ease-out;
-          -webkit-transition: transform, opacity, 0.2s ease-out;
-          -o-transition: transform, opacity, 0.2s ease-out;
-          transition: transform, opacity, 0.2s ease-out;
-          font-size: 13px;
-          color: var(--text-p0);
-          line-height: 1rem;
-          position: absolute;
-          white-space: nowrap; }
-          .LBody > .Side .mobile-only.info > .title .sub.dw, .LBody > .Side .header .info > .title .sub.dw {
-            transform: translateY(8px);
-            opacity: 0; }
-        .LBody > .Side .mobile-only.info > .title:hover .dw, .LBody > .Side .header .info > .title:hover .dw {
-          transform: translateY(0);
-          opacity: 1; }
-        .LBody > .Side .mobile-only.info > .title:hover .up, .LBody > .Side .header .info > .title:hover .up {
-          transform: translateY(-8px);
-          opacity: 0; }
     .LBody > .Side .header {
       margin: 1rem;
       margin-top: 2rem; }
@@ -1115,7 +1131,8 @@ body {
               font-size: 13.6px;
               color: var(--text-p2);
               display: block;
-              padding: 5px 8px; }
+              padding: 5px 8px;
+              white-space: break-spaces; }
               .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a.active, .LBody > .Side .widgets > .widget.toc .content #TableOfContents li > a.active {
                 color: var(--text-link); }
                 .LBody > .Side .widgets > .widget.tree .item #TableOfContents li > a.active::after, .LBody > .Side .widgets > .widget.toc .content #TableOfContents li > a.active::after {
@@ -1567,7 +1584,8 @@ body {
           .LBody > .Main > .content > .cards .card:hover {
             box-shadow: var(--shdw-hov); }
     .LBody > .Main > .footer {
-      padding: 1rem; }
+      padding: 1rem;
+      padding-bottom: 0; }
       .LBody > .Main > .footer > .sitemap {
         margin: .5rem 0;
         display: grid;
@@ -1654,9 +1672,9 @@ body {
         transform: translateX(320px); }
     .LBody > .Main {
       width: 100%; }
-      .LBody > .Main .tabs {
+      .LBody > .Main > .tabs {
         top: -1px; }
-        .LBody > .Main .tabs nav {
+        .LBody > .Main > .tabs > .nav {
           margin-top: .5rem !important; } }
 
 @media screen and (max-width: 500px) {
