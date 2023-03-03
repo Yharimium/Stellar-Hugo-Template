@@ -115,7 +115,8 @@ body, input, button {
 
 ::-webkit-scrollbar {
   width: 5px;
-  height: 5px; }
+  height: 5px;
+  background: transparent; }
 
 ::-webkit-scrollbar-thumb {
   border-radius: var(--border-radius);
@@ -711,7 +712,7 @@ hr {
   /* GenericTraceback */
   /* GenericUnderline */
   /* TextWhitespace */
-  .search-icon, .social img, .board img, .clipboard img, img.arrow, .sidebar-button img {
+  .search-icon, .social img, .board img, .clipboard img, img.arrow, .sidebar-button img, .mermaid svg {
     filter: invert(100%); }
   .tree .item > .inner > .list {
     background: black !important; } }
@@ -1617,10 +1618,10 @@ body {
   display: none !important; }
   .mobile-only.sidebar-button {
     border-radius: 100%;
-    -moz-transition: box-shadow 0.3s ease;
-    -webkit-transition: box-shadow 0.3s ease;
-    -o-transition: box-shadow 0.3s ease;
-    transition: box-shadow 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 1001;
     cursor: pointer;
     position: fixed;
@@ -1636,7 +1637,8 @@ body {
       height: 20px;
       margin: 10px; }
     .mobile-only.sidebar-button.layout {
-      box-shadow: var(--shdw-hov); }
+      box-shadow: var(--shdw-hov);
+      transform: translateY(-2px); }
   .mobile-only.info {
     padding: 1rem 1rem 0 1rem; }
 
