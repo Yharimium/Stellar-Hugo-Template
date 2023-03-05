@@ -954,7 +954,7 @@ hr {
   display: block;
   border-spacing: 0;
   max-width: fit-content;
-  margin: 1rem 0;
+  margin: 1rem auto;
   overflow: auto;
   background: var(--bg-card);
   -webkit-overflow-scrolling: touch; }
@@ -977,8 +977,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   text-rendering: optimizelegibility;
-  overflow-y: scroll;
-  scroll-behavior: smooth; }
+  overflow-y: scroll; }
 
 body {
   margin: 0 auto;
