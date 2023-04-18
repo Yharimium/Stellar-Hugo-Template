@@ -1,0 +1,54 @@
+name: github pages
+
+# 指定触发工作流程的事件为 push 和 pull_request
+on:
+  push:
+    branches:
+      - main 
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    # 授予权限以写入仓库内容
+    permissions:
+      contents: write
+
+    # 避免同一分支多次运行任务
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
+    steps:
+      # 获取 GitHub 仓库, 包含递归获取子模块的功能
+      - uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0
+
+      # 获取并更新子模块
+      - name: Update submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --recursive
+
+      # 设置 Hugo 环境
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # 使用 Hugo 构建网站
+      - name: Build
+        run: hugo --minify --buildFuture
+
+      # 部署网站到 GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        # 仅在推送到 main 分支时触发部署流程
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages

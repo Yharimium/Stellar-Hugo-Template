@@ -1,0 +1,81 @@
+title: "Hugo Stellar"
+paginate: 8
+buildfuture: true # 解决时区问题
+relativeURLs: true # 删除此项可能会导致 css 样式表和图片不能正确加载
+
+theme:
+- stellar
+
+markup:
+  _merge: deep # 删除此项将导致代码块渲染异常
+  tableOfContents: # 以下配置表明文章的目录将只包括 h1 ~ h4
+    startLevel: 1
+    endLevel: 4
+
+params:
+  author: Stellar
+  avatar: /avatar.png
+  logo: /logo.svg
+
+  description:
+  - "subtitle"
+  - "subsubtitle"
+
+  notice:
+  - "notice"
+  - "support `markdown` syntax"
+
+  copyright: "place copyright here"
+
+  tencentUrl: true # 若为 true：在 QQ 和微信内置的浏览器中打开网站会自动跳转到安全警告页面
+  autoInvert: true # 若为 true：夜间模式自动反色
+
+  social:
+  - name: "hugo"
+    url: "https://gohugo.io/"
+    logo: "/img/social/hugo.svg"
+  - name: "github"
+    url: "https://github.com/"
+    logo: "/img/social/github.svg"
+  - name: "bilibili"
+    url: "https://space.bilibili.com/"
+    logo: "/img/social/bilibili.svg"
+
+menus:
+  main:
+  - name: "博客"
+    weight: 1
+    url: "/"
+    params:
+      tabs:
+      - name: "所有文章"
+        url: "/"
+      - name: "分类"
+        url: "/categories/"
+      - name: "标签"
+        url: "/tags/"
+      - name: "归档"
+        url: "/archives/"
+  - name: "文档"
+    weight: 2
+    url: "/docs/"
+    params:
+      tabs:
+      - name: "所有文档"
+        url: "/docs/"
+  - name: "搜索"
+    weight: 3
+    url: "/search/"
+    params:
+      tabs:
+      - name: "博客搜索"
+        url: "/search/?sec=posts"
+      - name: "文档搜索"
+        url: "/search/?sec=docs"
+  - name: "关于"
+    weight: 4
+    url: "/about/"
+    params:
+      tabs:
+      - name: "About Hugo"
+        url: "/about/#about-hugo"
